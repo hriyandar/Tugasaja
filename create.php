@@ -10,7 +10,7 @@
     <a href="index.php"> Kembali</a>
     <br/>
     <br/>
-    <form method="post" >
+    <form method="post" action="tambah_aksi.php">
         <table>
             <tr>
                 <td>Id_Pelanggan</td>

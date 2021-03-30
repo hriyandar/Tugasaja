@@ -15,27 +15,33 @@
 	<br/>
 	<h3>Edit data</h3>
 
-	
+	<?php 
+	include "config.php";
+	$id = $_GET['id'];
+	$query_mysql = mysqli_query($link,"SELECT * FROM pelanggan WHERE id='$id'");
+	$nomor = 1;
+	while($data = mysqli_fetch_array($query_mysql)){
+	?>
 	<form action="update.php" method="post">		
 		<table>
 			<tr>
 				<td>Nama</td>
 				<td>
-					<input type="hidden" name="id" >
-					<input type="text" name="nama" >
+					<input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+					<input type="text" name="nama" value="<?php echo $data['nama'] ?>">
 				</td>					
 			</tr>	
 			<tr>
 				<td>Tanggal Lahir</td>
-				<td><input type="text" name="tgl_lahir" ></td>					
+				<td><input type="text" name="tgl_lahir" value="<?php echo $data['tgl_lahir'] ?>"></td>					
 			</tr>
 			<tr>
 				<td>Alamat</td>
-				<td><input type="text" name="alamat" ></td>					
+				<td><input type="text" name="alamat" value="<?php echo $data['alamat'] ?>"></td>					
 			</tr>	
 			<tr>
 				<td>No Telpon</td>
-				<td><input type="text" name="telp" ></td>					
+				<td><input type="text" name="telp" value="<?php echo $data['telp'] ?>"></td>					
 			</tr>	
 			<tr>
 				<td></td>
@@ -43,6 +49,6 @@
 			</tr>				
 		</table>
 	</form>
-	
+	<?php } ?>
 </body>
 </html>
