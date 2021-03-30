@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title>EDIT</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body>
 	<div class="judul">		
@@ -9,11 +13,12 @@
 	</div>
 	
 	<br/>
-	
-	<a href="index.php">Lihat Semua Data</a>
-
+	<div class="edit">
+	<a class="lht_data" href="index.php">Lihat Semua Data</a>
+	<br>
 	<br/>
-	<h3>Edit data</h3>
+
+	<h3 class="form">Edit data</h3>
 
 	<?php 
 	include "config.php";
@@ -22,33 +27,43 @@
 	$nomor = 1;
 	while($data = mysqli_fetch_array($query_mysql)){
 	?>
-	<form action="update.php" method="post">		
+	
+	<form class="form" action="update.php" method="post">		
 		<table>
 			<tr>
-				<td>Nama</td>
+				<td >Nama</td>
+				</tr>
+				<tr>
 				<td>
 					<input type="hidden" name="id" value="<?php echo $data['id'] ?>">
-					<input type="text" name="nama" value="<?php echo $data['nama'] ?>">
+					<input class="form" type="text" name="nama" value="<?php echo $data['nama'] ?>">
 				</td>					
 			</tr>	
 			<tr>
 				<td>Tanggal Lahir</td>
-				<td><input type="text" name="tgl_lahir" value="<?php echo $data['tgl_lahir'] ?>"></td>					
+				</tr>
+				<tr>
+				<td><input class="form" type="text" name="tgl_lahir" value="<?php echo $data['tgl_lahir'] ?>"></td>					
 			</tr>
 			<tr>
 				<td>Alamat</td>
-				<td><input type="text" name="alamat" value="<?php echo $data['alamat'] ?>"></td>					
+				</tr>
+				<tr>
+				<td><input class="form" type="text" name="alamat" value="<?php echo $data['alamat'] ?>"></td>					
 			</tr>	
 			<tr>
 				<td>No Telpon</td>
-				<td><input type="text" name="telp" value="<?php echo $data['telp'] ?>"></td>					
+				</tr>
+				<tr>
+				<td><input class="form" type="text" name="telp" value="<?php echo $data['telp'] ?>"></td>					
 			</tr>	
 			<tr>
-				<td></td>
-				<td><input type="submit" value="Simpan"></td>					
+				
+				<td><input type="submit" class="tombol" value="Simpan"></td>					
 			</tr>				
 		</table>
 	</form>
+</div>
 	<?php } ?>
 </body>
 </html>

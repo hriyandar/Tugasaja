@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    
-   
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body>
-   
+     <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header clearfix"> 
                         <h2 class="pull-left">Data Pelanggan</h2>
                         <a href="create.php" class="btn btn-success pull-right">Tambah Baru</a>
                     </div>
@@ -27,7 +33,7 @@
                                         echo "<th>Tanggal lahir</th>";
                                         echo "<th>Alamat</th>";
                                         echo "<th>Telepon</th>";
-                                        echo "<th colspan='2'>Pengaturan</th>";
+                                        echo "<th colspan = '2'>Pengaturan</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -40,8 +46,8 @@
                                         echo "<td>" . $row['telp'] . "</td>";
                                         echo "<td>";
                                             
-                                            echo "<a href='edit.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'>edit</span></a></td>";
-                                            echo "<td><a href='hapus.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'>hapus<span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a href='edit.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            echo "<a href='hapus.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
@@ -59,6 +65,9 @@
                     // Close connection
                     mysqli_close($link);
                     ?>
-               
+             <!--    </div>
+            </div>
+        </div>
+    </div> -->
 </body>
 </html>

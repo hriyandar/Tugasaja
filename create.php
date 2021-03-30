@@ -2,39 +2,53 @@
 <html>
 <head>
     <title>Tambah data </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body>
 
-    <h2>Tambah data pelanggan</h2>
+    <h2 class="form">Tambah data pelanggan</h2>
     <br/>
-    <a href="index.php"> Kembali</a>
+    <a class="lht_data" href="index.php"> Kembali</a>
     <br/>
     <br/>
-    <form method="post" action="tambah_aksi.php">
+    <form class="form" method="post" action="tambah_aksi.php">
         <table>
             <tr>
                 <td>Id_Pelanggan</td>
-                <td><input type="text" name="id"></td>
+                </tr>
+                <tr>
+                <td><input class="form" type="text" name="id"></td>
             </tr>
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama"></td>
+                </tr>
+                <tr>
+                <td><input class="form" type="text" name="nama"></td>
             </tr>
             <tr>
                 <td>Tanggal lahir</td>
-                <td><input type="text" name="tgl_lahir"></td>
+                </tr>
+                <tr>
+                <td><input class="form" type="text" name="tgl_lahir"></td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td><input type="text" name="alamat"></td>
+                </tr>
+                <tr>
+                <td><input class="form" type="text" name="alamat"></td>
             </tr>
             <tr>
                 <td>No Telepon</td>
-                <td><input type="text" name="telp"></td>
+                </tr>
+                <tr>
+                <td><input class="form" type="text" name="telp"></td>
             </tr>
             <tr>
                 
-                <td><input type="submit" value="SIMPAN"></td>
+                <td><input class="tombol" type="submit" value="Simpan"></td>
             </tr>
         </table>
     </form>

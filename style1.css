@@ -1,0 +1,47 @@
+body {
+  background-color: #CCFFCC;
+}
+
+h1 {
+  color: green;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+.tombol{
+  width: 90px;
+  background-color: #4CDF50;
+  color: white;
+  padding: 10px 17px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.form{
+  width: 100%;
+  padding: 5px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+}
+
+.lht_data{
+width: 100%;
+  background-color: #2E8BC0;
+  color: white;
+  padding: 10px 17px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit{
+	margin-left: 30px ;
+}
